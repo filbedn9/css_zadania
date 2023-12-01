@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>zadanie 74-Flis</title>
+<meta charset="utf-8" />
+<style type="text/css">
+
+</style>
+</head>
+<body bgcolor="salmon">
+<table border=2 BORDERCOLOR="lime"> <caption></caption> 
+<thead>
+<tr> 
+<td align="center"><font color=gold face="Arial Black">Pojęcia</td>
+<td align="center"><font color=green face="Arial Black">znaczenie</td>
+</tr> 
+</thead> 
+<tbody> 
+
+<tr> 
+<td><font color="gold" face="Arial Black">Kolor tła</td> 
+<td><font color="green" face="Arial Black">"Dzięki temu poleceniu można ustalić kolor tła dla danego elementu.
+Składnia reguły:
+<u>selektor {background-color: kolor;}</u>
+Wyraz selektor ma zastosowanie do wszystkich elementów, którym chcemy nadać tło.
+Natomiast jako kolor należy podać definicję koloru."</td> 
+</tr>
+
+<tr> 
+<td><font color="gold" face="Arial Black">Tło obrazkowe</td> 
+<td><font color="green" face="Arial Black">"Składnia reguły:
+<u>selektor {background-image: url(adres);}</u>
+Dzięki temu poleceniu można ustalić tło obrazkowe dla danego elementu.
+Wyraz selektor ma zastosowanie do wszystkich elementów, którym chcemy nadać tło obrazka.
+adres:
+względna ścieżka dostępu z miejsca w miejsce należy wpisać drogę uwzględniając wszystkie foldery wchodząc do folderu wpisujemy jego nazwę/ wychodząc z folderu wpisujemy ../ na końcu podajemy nazwę pliku z rozszerzeniem jeżeli jest to zewnętrzny arkusz CSS, to ścieżkę podajemy względem niego
+"none" - usunie obrazek
+np.
+background-image: url("file:///c:/CSS/_rozwiazanie/tla_marginesy/grafiki/tlo_1.jpg");
+Wspólnie z obrazkiem często podaje się dodatkowo kolor tła. W takim przypadku, jeśli obrazek będzie niedostępny lub użytkownik wyłączy wyświetlanie obrazów, tło przyjmie podany kolor.</td> 
+"</tr>
+
+<tr> 
+<td><font color="gold" face="Arial Black">Powtarzanie tła</td> 
+<td><font color="green" face="Arial Black">"Składnia reguły:
+<u>selektor {background-repeat: powtarzanie;}</u>
+Wyraz selektor ma zastosowanie do wszystkich elementów.
+powtarzanie:
+"repeat" - jednocześnie w pionie i poziomie - domyślnie
+"repeat-x" - w poziomie
+"repeat-y" - w pionie
+"no-repeat" - pojedynczy obrazek - bez powtarzania - w górnym-lewym rogu
+Dzięki temu poleceniu można ustalić jeden z czterech sposobów powtarzania się obrazka jako tła."</td> 
+</tr>
+
+<tr> 
+<td><font color="gold" face="Arial Black">Pozycja tła</td> 
+<td><font color="green" face="Arial Black">"Składnia reguły:
+<u>selektor {background-position: pozycja;}</u>
+Wyraz selektor ma zastosowanie do elementów blokowych.
+pozycja:<br>
+<font color=blue>jedna wartość<br>
+<font color=purple>jednostki miary<br>
+<font color=blue>"center" - obrazek na środku (w centrum)
+"left" - obrazek po lewej
+"right" - obrazek po prawej
+"top" - obrazek na górze
+"bottom" - obrazek na dole
+jednostki miary - odległość od lewej krawędzi
+dwie wartości (oddzielone spacją):
+"left top" - lewy-górny róg
+"left bottom" - lewy-dolny róg
+"right top" - prawy-górny róg
+"right bottom" - prawy-dolny róg
+dwie jednostki miary - pierwsza z nich oznacza odległość od lewej krawędzi, a druga - od górnej"
+<font color=purple>piksele - px
+punkty edytorskie - pt
+wysokość litery "x" - ex
+wysokość aktualnej czcionki - em
+centymetry lub milimetry - cm, mm
+części dziesiętne centymetra pisane z kropką np.: 0.5cm
+procent wielkości nadrzędnej - %
+cale - in (1in=2.54cm)
+<font color=green>Dzięki temu poleceniu można ustalić pozycję obrazka w ramach tła. Niemożliwe to jest przy wartości atrybutu powtarzania: repeat."
+
+</td> 
+</tr>
+
+<tr> 
+<td><font color="gold" face="Arial Black">Zaczepienie tła</td> 
+<td><font color="green" face="Arial Black">"Składnia reguły:
+<u>selektor {background-attachment: zaczepienie;}</u>
+zaczepienie:
+"scroll" - przewijanie tła (domyślnie)
+"fixed" - tło nieruchome
+Domyślnie tło obrazkowe przesuwa się wraz z przewijaną stroną. Poleceniem tym można sprawić, że tło będzie nieruchome w czasie przewijania zawartości strony."</td> 
+</tr>
+
+<tr> 
+<td><font color="gold" face="Arial Black">Łączenie atrybutów tła</td> 
+<td><font color="green" face="Arial Black">Składnia reguły:
+<u>selektor {background: wartości atrybutów;}</u>
+Wyraz selektor ma zastosowanie do wszystkich elementów.
+Natomiast wartości atrybutów to konkretne wartości atrybutów związane z tłem, wpisane we właściwej kolejności i oddzielone spacjami. Można niektóre pominąć.<br>
+wartości arybutu:<br>
+• kolor tła<br>
+• tło obrazkowe<br>
+• powtarzanie tła<br>
+• zaczepienie tła<br>
+• pozycja tła<br>
+Dzięki temu poleceniu można w jednym miejscu zebrać atrybuty dotyczące tła.<br>
+Przykład:<br>
+Po wpisaniu na przykład takiej reguły w arkuszu CSS:<br>
+p {color: #800000; background: #00ff00 url(../../grafiki/cwiczenie_13/tlo_css.jpg) no-repeat scroll center;}</td> 
+</tr>
+
+<tr> 
+<td><font color="gold" face="Arial Black">gradient liniowy</td> 
+<td><font color="green" face="Arial Black">Gradient liniowy {BACKGROUND: linear-gradient}<br>
+Gradient to wypełnienie tłem płynnym przejściu kilku kolorów.<br>
+selektor { background: linear-gradient(kierunek, kolor1 odległość1, kolor2 odległość2...) }<br>
+Selektorem może być praktycznie dowolny znacznik:<br>
+• p - akapit, <br>
+• h1 – tytuł<br>
+• td - komórka tabeli<br>
+Kierunek określa sposób rozłożenia barw. Można go podać na dwa sposoby:<br>
+słowa kluczowe<br>
+ to top - przejście kolorów nastąpi pionowo z dołu do góry (odpowiednik 0deg)<br>
+ to right top - ukośnie z lewego-dolnego do prawego-górnego narożnika<br>
+ to right - poziomo z lewej do prawej strony (odpowiednik 90deg)<br>
+ to right bottom - ukośnie z lewego-górnego do prawego-dolnego narożnika<br>
+ to bottom - pionowo z górny do dołu (odpowiednik 180deg - domyślnie)<br>
+ to left bottom - ukośnie z prawego-górnego do lewego-dolnego narożnika<br>
+ to left - poziomo z prawej do lewej strony (odpowiednik 270deg)<br>
+ to left top - ukośnie z prawego-dolnego do lewego-górnego narożnika<br>
+kąt - liczony zgodnie z ruchem wskazówek zegara<br>
+z wartością:<br>
+0deg skierowaną pionową w górę,<br>
+180deg - pionowo w dół<br>
+Kolor1 odległość1, kolor2 odległość2... - kolejne kolory i ich odległości na linii przejścia 
+gradientu. Obowiązkowo trzeba podać przynajmniej dwie pary "kolor odległość". Każda taka 
+para jest rozdzielona od kolejnej znakiem przecinka. Wielokropek (czyli "...") na końcu 
+należy usunąć. Określenie odległości kolorów nie jest obowiązkowe - wtedy podane barwy 
+zostaną rozłożone równomiernie w gradiencie.<br>
+Przykład<br>
+background: linear-gradient(to bottom, black 0%, white 100%)<br>
+uzyskamy gradient z kolorem czarnym (black) na górze i białym (white) na dole. Pomiędzy 
+nimi wystąpi łagodne przejście barw poprzez coraz jaśniejsze odcienie szarości. Wynika z 
+tego, że linia gradientu będzie w tym przypadku skierowana pionowo w dół (to bottom):
+</td> 
+</tr>
+
+<tr> 
+<td><font color="gold" face="Arial Black">Gradient promienisty</td> 
+<td><font color="green" face="Arial Black">Gradient promienisty {BACKGROUND: radial-gradient}
+Gradient promienisty to tło o płynnym przejściem kilku kolorów, wywołując efekt 
+trójwymiarowej kuli lub oświetlenia latarki.<br><br>
+selektor { background: radial-gradient(kształt rozmiar at pozycja, kolor1 odległość1, kolor2 
+odległość2...) }<br><br>
+Selektorem może być praktycznie dowolny znacznik:<br>
+• p - akapit, <br>
+• h1 – tytuł<br>
+• td - komórka tabeli<br><br>
+Jako kształ należy wpisać:<br><br>
+ circle - okrąg (domyślnie gdy jako rozmiar podano pojedynczy promień, określony w 
+jednostkach długości, a nie w procentach<br>
+ ellipse - elipsa<br><br>
+Rozmiar można ustalić na trzy sposoby:<br><br>
+ słowa kluczowe:<br>
+ closest-side - gradient będzie się rozchodził do najbliższej krawędzi elementu<br>
+ farthest-side - do najdalszej krawędzi<br>
+ closest-corner - do najbliższego narożnika<br>
+ farthest-corner - do najdalszego narożnika (domyślnie)<br>
+ promień - podany za pomocą jednostek długości lub procentowo<br>
+ poziom pion - poziomy i pionowy promień elipsy, określony za pomocą jednostek 
+długości lub procentowo<br><br>
+Pozycję definiuje się identycznie jak w przypadku położenia tła obrazkowego.<br><br>
+Kolor1 odległość1, kolor2 odległość2... - oznaczają to samo, co w przypadku gradientu 
+liniowego.<br><br>
+Gradient promienisty jest tworzony analogicznie jak liniowy, tylko kolory rozchodzą z 
+jednego punktu (domyślnie w centrum powierzchni) równomiernie na zewnątrz we 
+wszystkich kierunkach, aż do narożnika elementu. Wygląda to tak, jakbyśmy patrzyli na 
+oświetloną kulę (bądź elipsoidę) albo powierzchnię oświetloną latarką. Zatem linia gradientu 
+biegnie ze środka na zewnątrz:<br><br>
+radial-gradient(white, black)<br><br>
+Większość zmiennych w deklaracji gradientu promienistego jest opcjonalna. Prawdę mówiąc 
+składnia polecenia jest dość złożona:
+radial-gradient<br>
+(
+ [ [ circle || <length> ] [ at <position> ]? , |
+ [ ellipse || [ <length> | <percentage> ]{2} ] [ at <position> ]? , |
+ [ [ circle | ellipse ] || [ closest-corner | closest-side | farthest-corner | farthest-side ] ] [ at 
+<position> ]? 
+at <position> ,
+ ]?
+ <color-stop> [ , <color-stop> ]+
+)
+Z powodu złożoności składni gradientu promienistego, przy jego komponowaniu polecam 
+skorzystać ze specjalnego generatora.<br>
+Przykład<br>
+radial-gradient(white, black)<br><br>
+Jeżeli identyczną deklarację gradientu wstawimy pod elementem prostokątnym, zamiast 
+okręgu otrzymamy elipsę:<br>
+radial-gradient(white, black)<br><br>
+Różnice w rozmiarze gradientu w zależności od użytych słów kluczowych:<br>
+radial-gradient(closest-side at 25% 75%, white, black)<br>
+radial-gradient(farthest-side at 25% 75%, white, black)<br>
+radial-gradient(closest-corner at 25% 25%, white, black)<br>
+radial-gradient(farthest-corner at 25% 25%, white, black)<br><br>
+Inne ciekawe przykłady:<br>
+radial-gradient(at 50% 110%, lightskyblue 40%, fuchsia, purple, blue, lime, yellow, orange, <br>
+red, lightskyblue 60%)<br>
+radial-gradient(ellipse 33% 66% at right top, white, red 75%, black)<br>
+Powtarzany gradient promienisty<br><br>
+selektor { background: repeating-radial-gradient(kształt rozmiar at pozycja, kolor1 
+odległość1, kolor2 odległość2...) }<br><br>
+W przypadku gradientu promienistego szczególnie często zdarza się, że duże powierzchnie 
+tła już poza gradientem są jednolitego koloru. Możemy temu zapobiec poprzez powtarzanie 
+wzoru w kółko.<br>
+Przykład:
+repeating-radial-gradient(white 33%, black 66%)<br>
+Dla porównania - tak będzie wyglądał ten sam gradient, ale już bez powtarzania:
+radial-gradient(white 33%, black 66%)
+</td> 
+</tr>
+</tbody> 
+</table>
+</body>
+</html>
